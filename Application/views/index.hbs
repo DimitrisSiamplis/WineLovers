@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<link rel="shortcut icon" href="https://img.pixers.pics/pho_wat(s3:700/FO/58/19/15/32/700_FO58191532_419f0e8868f635c0fe5a9a9262551231.jpg,467,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,247,650,jpg)/wall-murals-wine-bottle-pouring-to-wine-glass.jpg.jpg" />
+
+	<title>WineLovers</title>
+	<link rel="shortcut icon" href="https://img.pixers.pics/pho_wat(s3:700/FO/58/19/15/32/700_FO58191532_419f0e8868f635c0fe5a9a9262551231.jpg,467,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,247,650,jpg)/wall-murals-wine-bottle-pouring-to-wine-glass.jpg.jpg" />
+<link rel="stylesheet" href="/index.css">
+<body>
+
+<h2>Welcome to WineLovers website</h2>
+<div class="container" id="container">
+
+	<div class="form-container sign-up-container">
+		<form action="/auth/register" method="POST">
+			<h1>Create Account</h1>
+			<span>Enter your details</span>
+            
+            {{#if message}}
+                <span style="color:red;"> {{message}}</span>
+            {{/if}}
+
+			<input type="text" placeholder="Name" name="name" required />
+			<input type="email" placeholder="Email" name="email" required />
+			<input type="password" placeholder="Password" name="password" required />
+            <input type="password" placeholder="Confirm Password" name="confirnm_password" required />
+            <input type="text" placeholder="Address with Number" name="address"  required />
+            <input type="date" placeholder="Birthday" name="birthday" required />
+            <input type="number" placeholder="Mobile" name="mobile" required />
+            <select id="cars" name="gender" required >
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+                
+            </select>
+
+            
+			<button type="submit" >Sign Up</button>
+		</form>
+	</div>
+
+	<div class="form-container sign-in-container">
+        
+		<form  action="/auth/login" method="POST">
+            {{#if message}}
+                <h2 style="color:red;" > {{message}}</h2>
+            {{/if}}
+
+			<h1>Sign in</h1>
+			<span>or use your account</span>
+			<input type="email" placeholder="Email" name="email" required />
+			<input type="password" placeholder="Password" name="password"  required />
+			<a href="/forgotPassword">Forgot your password?</a>
+			{{!-- <a href="/changePassword">Change Password</a> --}}
+			<button type="submit">Sign In</button>
+		</form>
+	</div>
+
+
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>
+		Created by <i class="fa fa-heart"></i> 
+		<a target="_blank" href="#">Dimitrios Siamplis</a>
+		- University of Patras
+		<a target="_blank" href="https://www.upatras.gr/">here</a>.
+	</p>
+</footer>
+
+<script>
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active");
+    });
+
+    signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active");
+    });
+</script>
+
+</body>
+</html>

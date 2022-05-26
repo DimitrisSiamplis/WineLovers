@@ -1,0 +1,137 @@
+.navbar {
+    width: 100%;
+      position: relative;
+      display: inherit;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0;
+      padding-bottom: 0;
+      background-color: rgb(133, 13, 13);
+      overflow: auto;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #000;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+  }
+  
+  img{
+      width: 100%;
+      height: 200px;
+  }
+  .active{
+      background-color: rgb(60, 61, 61);
+  }
+  
+  
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+
+  body {
+    margin: 0;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: .8125rem;
+    font-weight: 400;
+    line-height: 1.5385;
+    color: #333;
+    text-align: left;
+    background-color: #f5f5f5
+}
+
+.mt-50 {
+    margin-top: 50px
+}
+
+.mb-50 {
+    margin-bottom: 50px
+}
+
+.bg-teal-400 {
+    background-color: #26a69a
+}
+
+a {
+    text-decoration: none !important
+}
+
+.fa {
+    color: red
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+  width: 70%;
+  
+}
+
+.pagination{
+  margin-left: 20%;
+}
+
+.fa {
+  color: gold;
+}
+
+footer{
+  font-size: 18px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+
+.search{
+  width: 30%;
+  height: 560px;
+  margin-left: 2%;
+  margin-top: 7%;
+  width: 25%;
+  
+  border-radius: 10px;
+  background-color: #86171798;
+  padding: 20px;
+  
+}
+
+
+
+.olamazi{
+  display: flex;
+}
+

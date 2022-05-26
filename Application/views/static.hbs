@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static.css">
+    <title>WineLovers</title>
+    <link rel="shortcut icon" href="https://img.pixers.pics/pho_wat(s3:700/FO/58/19/15/32/700_FO58191532_419f0e8868f635c0fe5a9a9262551231.jpg,467,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,247,650,jpg)/wall-murals-wine-bottle-pouring-to-wine-glass.jpg.jpg" />
+</head>
+<body>
+   
+    <div class="navbar">
+        <a  href="/home"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="/wines/1"><i class="fas fa-wine-bottle"></i> Wines</a> 
+        <a href="/profile/{{id}}"><i class="fas fa-user-alt"></i> Profile</a> 
+        <a href="/cart"><i class="fas fa-shopping-cart"></i> Cart</a> 
+        <a href="/history"><i class="fas fa-info-circle"></i> History</a> 
+        <a href="/addWine"><i class="fas fa-plus-circle"></i> Add Wine</a>
+        <a class="active" href="/statistic"><i class="	fas fa-poll"></i> Statistic</a>
+        <a href="/blog"><i class="fas fa-blog"></i> Blog</a>
+        <a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+    </div>
+    
+
+    <main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        
+        <span class="fs-4">WineLovers Website</span>
+      </a>
+    </header>
+
+    
+
+    
+
+    <div class="container mt-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-md-8">
+
+                <form id="regForm" action="/auth/addStatistic" method="POST">
+                
+                    <h1 id="register">Your opinion matters</h1>
+
+                    <h2>User Details</h2>
+                    <hr>
+
+                    <div class="tab">
+
+                        <div class="first">
+                            <h6>Sex</h6>
+                            <select name="sex" >
+                                <option value="Man">Man</option>
+                                <option value="Woman">Woman</option>
+                            </select>
+
+                            <h6>Age</h6>
+                            <p><input type="number" min="18" max="100" placeholder="Age" oninput="this.className = ''" name="age"></p>
+
+                            <h6>Location</h6>
+                            <p><input placeholder="Location" oninput="this.className = ''" name="location"></p>
+
+                            <h6>Daily consumption of wine per day</h6>
+                            <select name="consumption" >
+                                <option value="200">Less than 200ml</option>
+                                <option value="400">Less than 400m</option>
+                                <option value="600">Less than 600m</option>
+                                <option value="750">One Botle</option>
+                            </select>
+
+                            <h6>Price range for a bottle of wine</h6>
+                            <select name="price">
+                                <option value="10"> > 10 €</option>
+                                <option value="10-30">10-30 €</option>
+                                <option value="30-80">30-80 €</option>
+                                <option value="80"> <80 € </option>
+                            </select>
+
+                        </div>
+
+                        
+
+                        <div class="second">
+
+                            
+
+                            <h6>What kind of wine would you prefer?</h6>
+                            <select name="kind" id="cars">
+                                <option value="Ξηρό">Ξηρό</option>
+                                <option value="Ημίγλυκο">Ημίγλυκο </option>
+                                <option value="Σαμπανιζέ">Σαμπανιζέ</option>
+                                <option value="Φρουτώδες">Φρουτώδες </option>
+                            </select>
+
+                            <h6>What color of wine would you prefer?</h6>
+                            <select name="color" id="cars">
+                                <option value="Red">Red</option>
+                                <option value="White">White </option>
+                                <option value="Roze">Roze</option>
+                            </select>
+
+                            <h6>Do you prefer old wines?</h6>
+                            <select name="oldWine">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+
+                            <h6>From which country do your favorite wines come from?</h6>
+                            <select name="country" >
+                                <option value="Greece">Greece</option>
+                                <option value="France">France</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Portugal">Portugal</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Other">Other</option>
+                            </select>
+
+
+                        </div>
+                    </div>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <h2>User Preferences</h2>
+                    <hr>
+
+                    <div class="tab">
+
+                        <div class="first">
+                            <h6>What <strong>kind</strong> and <strong>color</strong> of wine would you choose for the Christmas table?</h6>
+                            <select name="christmas">
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+
+                            <h6>What <strong>kind</strong> and <strong>color</strong> of wine would you choose for the Easter table?</h6>
+                            <select name="easter" >
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+                           
+
+                            <h6>What <strong>kind</strong> and <strong>color</strong> of wine would you choose for Valentine's day?</h6>
+                            <select name="valentine" >
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+        
+
+                        </div>
+
+
+                        <div class="second">
+
+                            <h6>What <strong>kind</strong> and <strong>color</strong> of wine would you choose in the summer?</h6>
+                            <select name="summer" >
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+
+                            <h6>What <strong>kind</strong> and <strong>color</strong> of wine would you choose in the winter?</h6>
+                            <select name="winter" >
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <br><br>
+                    <h2>Food and Wine</h2>
+                    <hr>
+                    <div class="tab">
+
+                        <div class="first">
+                            <h6>What wine would you choose to accompany the white meat?</h6>
+                            <select name="whiteMeat" id="cars">
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+                            <h6>What wine would you choose to accompany the red meat?</h6>
+                            <select name="redMeat" id="cars">
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+                            <h6>What wine would you choose to accompany the fish?</h6>
+                            <select name="fish" id="cars">
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+                            <h6>What wine would you choose to accompany the vegetables?</h6>
+                            <select name="vegetables" id="cars">
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="second">
+                            <h6>What wine would you choose to accompany the cheece?</h6>
+                            <select name="cheece" id="cars">
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+                            <h6>What wine would you choose to accompany the pasta?</h6>
+                            <select name="pasta" id="cars">
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+                            <h6>What wine would you choose to accompany the pizza?</h6>
+                            <select name="pizza" id="cars">
+                                <option value="Λευκο&Ξηρό">Λευκο και Ξηρό</option>
+                                <option value="Λευκο&Ημίγλυκο">Λευκο και Ημίγλυκο</option>
+                                <option value="Κόκκινο&Ξηρό">Κόκκινο και Ξηρό </option>
+                                <option value="Κόκκινο&Ημίγλυκο">Κόκκινο και Ημίγλυκο </option>
+                                <option value="Ροζε&Ξηρό">Ροζε και Ξηρό </option>
+                                <option value="Ροζε&Ημίγλυκο">Ροζε και Ημίγλυκο </option>
+                            </select>
+
+
+                        </div>
+                    </div>
+
+                    
+                    <div style="overflow:auto;" id="nextprevious">
+                        <div style="float:right;"></button> <button type="submit" id="nextBtn" onclick="nextPrev(1)">Submit details</button> </div>
+                    </div>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+
+      <p><a class="footerClass" href="/home/aboutUs" >About Us</a> <a  class="footerClass" href="/home/contuctUs" >Contuct Us</a> <a class="footerClass"  href="/home/news" >News</a></p>
+      
+      
+      &copy; 2021 WineLovers Copy rights
+         
+    </footer>
+  </div>
+</main>
+
+</body>
+</html>
+
+
+<script>
+    var currentTab = 0;
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+
+        showTab(currentTab);
+
+    });
+
+    function showTab(n) {
+        var x = document.getElementsByClassName("tab");
+        x[n].style.display = "block";
+        if (n == 0) {
+            document.getElementById("prevBtn").style.display = "none";
+        } else {
+         document.getElementById("prevBtn").style.display = "inline";
+        }
+        if (n == (x.length - 1)) {
+         document.getElementById("nextBtn").innerHTML = '<i class="fa fa-angle-double-right"></i>';
+        } else {
+            document.getElementById("nextBtn").innerHTML = '<i class="fa fa-angle-double-right"></i>';
+        }
+        fixStepIndicator(n)
+    }
+
+    function nextPrev(n) {
+        var x = document.getElementsByClassName("tab");
+        if (n == 1 && !validateForm()) return false;
+        x[currentTab].style.display = "none";
+        currentTab = currentTab + n;
+        if (currentTab >= x.length) {
+
+        document.getElementById("nextprevious").style.display = "none";
+        document.getElementById("all-steps").style.display = "none";
+        document.getElementById("register").style.display = "none";
+        document.getElementById("text-message").style.display = "block";
+
+
+
+
+        }
+        showTab(currentTab);
+    }
+
+    function validateForm() {
+        var x, y, i, valid = true;
+        x = document.getElementsByClassName("tab");
+        y = x[currentTab].getElementsByTagName("input");
+        for (i = 0; i < y.length; i++) { if (y[i].value=="" ) { y[i].className +=" invalid" ; valid=false; } } if (valid) { document.getElementsByClassName("step")[currentTab].className +=" finish" ; } return valid; } function fixStepIndicator(n) { var i, x=document.getElementsByClassName("step"); for (i=0; i < x.length; i++) { x[i].className=x[i].className.replace(" active", "" ); } x[n].className +=" active" ; }
+</script>

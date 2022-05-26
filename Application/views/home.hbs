@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/home.css">
+    <title>WineLovers</title>
+    <link rel="shortcut icon" href="https://img.pixers.pics/pho_wat(s3:700/FO/58/19/15/32/700_FO58191532_419f0e8868f635c0fe5a9a9262551231.jpg,467,700,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,247,650,jpg)/wall-murals-wine-bottle-pouring-to-wine-glass.jpg.jpg" />
+</head>
+<body>
+   
+    <div class="navbar">
+        <a class="active" href="/home"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <a href="/wines"><i class="fas fa-wine-bottle"></i> Wines</a> 
+        <a href="/profile/{{id}}"><i class="fas fa-user-alt"></i> Profile</a> 
+        <a href="/cart"><i class="fas fa-shopping-cart"></i> Cart</a> 
+        <a href="/history"><i class="fas fa-info-circle"></i> History</a> 
+        <a href="/addWine"><i class="fas fa-plus-circle"></i> Add Wine</a>
+        <a href="/statistic"><i class="	fas fa-poll"></i> Statistic</a>
+        <a href="/results"><i class="	fas fa-percent"></i> Results</a>
+        <a href="/blog"><i class="fas fa-blog"></i> Blog</a>
+        <a href="/logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+    </div>
+    
+
+    <main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+      <a href="/home" class="d-flex align-items-center text-dark text-decoration-none">
+        
+        <span class="fs-4">WineLovers Website</span>
+      </a>
+    </header>
+
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Discover any Wines</h1>
+        <p class="col-md-8 fs-4">Trusted by millions to discover and buy the right wine every time.</p>
+        <a href="/wines/1"><button class="btn btn-primary btn-lg" type="button">Discover Wine</button></a>
+        
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-white bg-dark rounded-3">
+          <h2>Find all the secretes of Wines</h2>
+          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
+          <button class="btn btn-outline-light" type="button">Example button</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Wine your favourite drink!</h2>
+          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+          <button class="btn btn-outline-secondary" type="button">Example button</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-muted border-top">
+
+      <p><a class="footerClass" href="/home/aboutUs" >About Us</a> <a  class="footerClass" href="/home/ContactUs" >Contact Us</a> <a class="footerClass"  href="/home/news" >News</a></p>
+      
+      
+      &copy; 2021 WineLovers Copy rights
+         
+    </footer>
+  </div>
+</main>
+
+</body>
+</html>
